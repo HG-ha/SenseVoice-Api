@@ -20,3 +20,23 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 pip install -r requirements.txt
 ```
 
+### 接口测试
+1. 从URL转文字
+   ```
+   curl --request POST \
+    --url http://127.0.0.1:8000/upload-url/ \
+    --header 'content-type: application/json' \
+    --data '{
+      "audio_urls": [
+        "https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav"
+      ]
+    }
+    '
+   ```
+2. 从文件转文字
+   ```
+   curl --request POST \
+    --url http://127.0.0.1:8000/upload-file/ \
+    --header 'content-type: multipart/form-data' \
+    --form 'files=@asr_example_zh.wav'
+   ```
