@@ -27,7 +27,10 @@ docker run -p 8000:8000 yiminger/sensevoice:latest
 
 ### 本地安装
 ```
+# 安装依赖
 pip install -r requirements.txt
+# 运行
+python main.py
 ```
 
 ### 接口测试
