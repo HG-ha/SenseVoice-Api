@@ -14,3 +14,8 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 
 # SenseVoice-Api
 此项目是基于SenseVoice的funasr版本进行的api发布
+
+### 安装
+``` Python 3.8
+pip install -r requirements.txt
+```
