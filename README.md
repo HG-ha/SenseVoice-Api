@@ -13,9 +13,10 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 - **服务部署：** 具有完整的服务部署链路，支持多并发请求，支持客户端语言有，python、c++、html、java与c#等。
 
 # SenseVoice-Api
-此项目是基于SenseVoice的funasr版本进行的api发布
+此项目是基于SenseVoice的funasr版本进行的api发布，建议使用Python 3.8
 
 ### 安装
-``` Python 3.8
+```
 pip install -r requirements.txt
 ```
+
