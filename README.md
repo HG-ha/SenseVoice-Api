@@ -15,9 +15,13 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 # SenseVoice-Api
 此项目是基于SenseVoice的funasr版本进行的api发布，建议使用Python 3.8
 
-### Docker部署(等待完成)
+### Docker部署
 ```
+# 拉取镜像
 docker pull yiminger/sensevoice:latest
+# 本地编译镜像
+docker build -t sensevoice .
+# 运行
 docker run -p 8000:8000 yiminger/sensevoice:latest
 ```
 
