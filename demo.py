@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from funasr import AutoModel
 
 model_dir = "iic/SenseVoiceSmall"
