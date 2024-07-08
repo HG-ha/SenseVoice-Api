@@ -1,4 +1,4 @@
-# SenseVoice-Api
+# SenseVoice
 SenseVoice是具有音频理解能力的音频基础模型，包括语音识别（ASR）、语种识别（LID）、语音情感识别（SER）和声学事件分类（AEC）或声学事件检测（AED）。本项目提供SenseVoice模型的介绍以及在多个任务测试集上的benchmark，以及体验模型所需的环境安装的与推理方式。
 
 <a name="核心功能"></a>
@@ -12,4 +12,5 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 - **微调定制：** 具备便捷的微调脚本与策略，方便用户根据业务场景修复长尾样本问题。
 - **服务部署：** 具有完整的服务部署链路，支持多并发请求，支持客户端语言有，python、c++、html、java与c#等。
 
+# SenseVoice-Api
 此项目是基于SenseVoice的funasr版本进行的api发布
