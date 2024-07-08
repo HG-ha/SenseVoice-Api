@@ -1,3 +1,4 @@
+# 删除requirements中的torch后再进行docker构建，以防止下载CUDA版本的torch
 FROM python:3.8-slim
 
 WORKDIR /app
