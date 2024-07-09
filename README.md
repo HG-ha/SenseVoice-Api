@@ -17,11 +17,8 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 
 ### Docker部署
 ```
-# 拉取镜像(等待推送)
+# 拉取镜像
 docker pull yiminger/sensevoice:latest
-# 本地编译镜像
-git clone https://github.com/HG-ha/SenseVoice-Api.git && cd SenseVoice-Api
-docker build -t sensevoice .
 # 运行
 docker run -p 8000:8000 yiminger/sensevoice:latest
 ```
