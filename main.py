@@ -17,7 +17,7 @@ class UrlInput(BaseModel):
 model_dir = "iic/SenseVoiceSmall"
 
 # 快速预测
-# model = AutoModel(model=model_dir, trust_remote_code=True, device=["cuda:0", "cpu"])
+# model = AutoModel(model=model_dir, trust_remote_code=True, device="cpu")
 
 # 准确预测
 model = AutoModel(
@@ -25,7 +25,7 @@ model = AutoModel(
     vad_model="fsmn-vad",
     vad_kwargs={"max_single_segment_time": 30000},
     trust_remote_code=True,
-    device=["cuda:0", "cpu"],
+    device="cpu",
 )
 
 
