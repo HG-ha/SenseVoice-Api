@@ -13,7 +13,7 @@ model = AutoModel(
     vad_model="fsmn-vad",
     vad_kwargs={"max_single_segment_time": 30000},
     trust_remote_code=True,
-    device=["cuda:0", "cpu"],
+    device= "cpu",
 )
 
 # 从Bytes
