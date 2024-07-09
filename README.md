@@ -35,6 +35,7 @@ python main.py
 ### 接口测试
 1. 从URL转文字
    ```
+   # 支持多参
    curl --request POST \
     --url http://127.0.0.1:8000/upload-url/ \
     --header 'content-type: application/json' \
@@ -47,6 +48,7 @@ python main.py
    ```
 2. 从文件转文字
    ```
+   # 支持多参
    curl --request POST \
     --url http://127.0.0.1:8000/upload-file/ \
     --header 'content-type: multipart/form-data' \
