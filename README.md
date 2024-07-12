@@ -59,3 +59,9 @@ python main.py
 ```
 http://127.0.0.1:8000/docs
 ```
+
+### 指CPU或GPU
+```
+使用CPU：device="cpu"
+使用GPU：device="cuda:0"
+```
