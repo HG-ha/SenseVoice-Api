@@ -4,6 +4,7 @@ from fastapi import FastAPI, File, UploadFile, HTTPException
 from pydantic import BaseModel, HttpUrl, ValidationError
 from typing import List
 from funasr import AutoModel
+from funasr.utils.postprocess_utils import rich_transcription_postprocess
 
 app = FastAPI()
 
@@ -41,7 +42,8 @@ async def upload_url(data: UrlInput):
                 use_itn=False,
                 batch_size=batch_size,
             )
-            results.append(res)
+            data = rich_transcription_postprocess(res[0]["text"])
+            results.append(data)
         return {"message": "URL input processed successfully", "results": results}
     except ValidationError as e:
         raise HTTPException(status_code=400, detail=e.errors())
@@ -68,8 +70,8 @@ async def upload_file(files: List[UploadFile] = File(...)):
                 use_itn=False,
                 batch_size=batch_size,
             )
-            results.append(res)
-
+            data = rich_transcription_postprocess(res[0]["text"])
+            results.append(data)
         return {"message": "File inputs processed successfully", "results": results}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -81,4 +83,4 @@ if __name__ == "__main__":
 
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8001)
