@@ -45,6 +45,9 @@ python main.py
       ]
     }
     '
+
+   output:
+     {"message":"URL input processed successfully","results":["欢迎大家来体验达摩院推出的语音识别模型"]}
    ```
 2. 从文件转文字
    ```
@@ -53,6 +56,9 @@ python main.py
     --url http://127.0.0.1:8000/upload-file/ \
     --header 'content-type: multipart/form-data' \
     --form 'files=@asr_example_zh.wav'
+
+   output:
+     {"message":"URL input processed successfully","results":["欢迎大家来体验达摩院推出的语音识别模型"]}
    ```
 
 ### 接口文档
