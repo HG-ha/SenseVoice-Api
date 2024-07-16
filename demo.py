@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from funasr import AutoModel
+from funasr.utils.postprocess_utils import rich_transcription_postprocess
 
 model_dir = "iic/SenseVoiceSmall"
 
@@ -30,5 +31,5 @@ res = model.generate(
     use_itn=True,
     batch_size=64,
 )
-
-print(res)
+data = rich_transcription_postprocess(res[0]["text"])
+print(data)
