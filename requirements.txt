@@ -1,5 +1,7 @@
-torch>=1.13
-torchaudio
-funasr
-fastapi
-modelscope
+funasr_onnx==0.4.1
+fastapi==0.112.2
+numpy==1.26.4
+uvicorn==0.30.6
+librosa==0.10.2
+aiohttp==3.10.5
+python-multipart==0.0.9
