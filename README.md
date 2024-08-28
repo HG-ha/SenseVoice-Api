@@ -53,7 +53,7 @@ python main.py
 1. 从URL转文字
    ```
    curl --request POST \
-    --url http://127.0.0.1:8000/extract_text-url/ \
+    --url http://127.0.0.1:8000/extract_text \
     --header 'content-type: multipart/form-data' \
     --data '{
       "url": "https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav"
@@ -62,7 +62,7 @@ python main.py
 2. 从文件转文字
    ```
    curl --request POST \
-    --url http://127.0.0.1:8000/extract_text-file/ \
+    --url http://127.0.0.1:8000/extract_text \
     --header 'content-type: multipart/form-data' \
     --form 'file=@asr_example_zh.wav'
    ```
