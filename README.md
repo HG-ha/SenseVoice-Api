@@ -1,6 +1,7 @@
 # SenseVoice-Api
 此项目是基于SenseVoice的funasr_onnx版本进行的api发布, 使用Python3.10.14开发，可以快速发布到各种onnx支持的设备平台
-模型文件：[https://huggingface.co/mingl/Sensevoice_Api](https://huggingface.co/mingl/Sensevoice_Api)
+
+下载模型文件：[https://huggingface.co/mingl/Sensevoice_Api](https://huggingface.co/mingl/Sensevoice_Api)
 
 目录结构：
 Dockerfile
