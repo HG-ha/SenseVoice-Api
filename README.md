@@ -3,12 +3,14 @@
 
 下载模型文件：[https://huggingface.co/mingl/Sensevoice_Api](https://huggingface.co/mingl/Sensevoice_Api)
 
-目录结构：
-Dockerfile
-main.py
-requirements.txt
-iic
-  └─SenseVoiceSmall
+## 目录结构：
+SenseVoice-Api/
+|
+|——Dockerfile
+|——main.py
+|——requirements.txt
+|——iic
+    └─SenseVoiceSmall
       │  am.mvn
       │  chn_jpn_yue_eng_ko_spectok.bpe.model
       │  config.yaml
