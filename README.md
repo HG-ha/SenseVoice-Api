@@ -1,3 +1,6 @@
+# SenseVoice-Api
+此项目是基于SenseVoice的funasr_onnx版本进行的api发布, 使用Python3.10.14开发
+
 # SenseVoice
 SenseVoice是具有音频理解能力的音频基础模型，包括语音识别（ASR）、语种识别（LID）、语音情感识别（SER）和声学事件分类（AEC）或声学事件检测（AED）。本项目提供SenseVoice模型的介绍以及在多个任务测试集上的benchmark，以及体验模型所需的环境安装的与推理方式。
 
@@ -12,10 +15,7 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 - **微调定制：** 具备便捷的微调脚本与策略，方便用户根据业务场景修复长尾样本问题。
 - **服务部署：** 具有完整的服务部署链路，支持多并发请求，支持客户端语言有，python、c++、html、java与c#等。
 
-# SenseVoice-Api
-此项目是基于SenseVoice的funasr版本进行的api发布，默认只输出识别到的文字，建议使用Python 3.8
-
-### Docker部署
+### Docker部署(待更新)
 ```
 # 拉取镜像
 docker pull yiminger/sensevoice:latest
@@ -35,39 +35,22 @@ python main.py
 ### 接口测试
 1. 从URL转文字
    ```
-   # 支持多参
    curl --request POST \
-    --url http://127.0.0.1:8000/upload-url/ \
-    --header 'content-type: application/json' \
+    --url http://127.0.0.1:8000/extract_text-url/ \
+    --header 'content-type: multipart/form-data' \
     --data '{
-      "audio_urls": [
-        "https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav"
-      ]
-    }
-    '
-
-   output:
-     {"message":"URL input processed successfully","results":["欢迎大家来体验达摩院推出的语音识别模型"]}
+      "url": "https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav"
+    }'
    ```
 2. 从文件转文字
    ```
-   # 支持多参
    curl --request POST \
-    --url http://127.0.0.1:8000/upload-file/ \
+    --url http://127.0.0.1:8000/extract_text-file/ \
     --header 'content-type: multipart/form-data' \
-    --form 'files=@asr_example_zh.wav'
-
-   output:
-     {"message":"URL input processed successfully","results":["欢迎大家来体验达摩院推出的语音识别模型"]}
+    --form 'file=@asr_example_zh.wav'
    ```
 
 ### 接口文档
 ```
 http://127.0.0.1:8000/docs
-```
-
-### 指CPU或GPU
-```
-使用CPU：device="cpu"
-使用GPU：device="cuda:0"
 ```
