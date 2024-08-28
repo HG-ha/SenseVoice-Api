@@ -6,16 +6,16 @@
 ## 目录结构：
 ```
 SenseVoice-Api/
-Dockerfile
-main.py
-requirements.txt
-iic
-  └─SenseVoiceSmall
-        │——am.mvn
-        │——chn_jpn_yue_eng_ko_spectok.bpe.model
-        │——config.yaml
-        │——model.onnx
-        │——model_quant.onnx
+  │——Dockerfile
+  │——main.py
+  │——requirements.txt
+  │——iic
+      └─SenseVoiceSmall
+            │——am.mvn
+            │——chn_jpn_yue_eng_ko_spectok.bpe.model
+            │——config.yaml
+            │——model.onnx
+            │——model_quant.onnx
 ```
 
 # SenseVoice
