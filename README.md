@@ -32,7 +32,7 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 - **微调定制：** 具备便捷的微调脚本与策略，方便用户根据业务场景修复长尾样本问题。
 - **服务部署：** 具有完整的服务部署链路，支持多并发请求，支持客户端语言有，python、c++、html、java与c#等。
 
-### Docker部署(待更新)
+### Docker部署(CPU+量化模型)
 ```
 # 拉取镜像
 docker pull yiminger/sensevoice:latest
