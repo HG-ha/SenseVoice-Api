@@ -34,10 +34,12 @@ SenseVoice是具有音频理解能力的音频基础模型，包括语音识别�
 
 ### Docker部署(CPU+量化模型)
 ```
-# 拉取镜像
-docker pull yiminger/sensevoice:latest
 # 国内
 docker pull registry.cn-hangzhou.aliyuncs.com/yiminger/sensevoice:latest
+docker run -p 8000:8000 registry.cn-hangzhou.aliyuncs.com/yiminger/sensevoice:latest
+
+# Docker hub
+docker pull yiminger/sensevoice:latest
 # 运行
 docker run -p 8000:8000 yiminger/sensevoice:latest
 ```
