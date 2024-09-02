@@ -52,12 +52,8 @@ python main.py
 ### 接口测试
 1. 从URL转文字
    ```
-   curl --request POST \
-    --url http://127.0.0.1:8000/extract_text \
-    --header 'content-type: multipart/form-data' \
-    --data '{
-      "url": "https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav"
-    }'
+   curl --location --request POST 'http://127.0.0.1:8000/extract_text' \
+    --form 'url=https://isv-data.oss-cn-hangzhou.aliyuncs.com/ics/MaaS/ASR/test_audio/asr_example_zh.wav'
    ```
 2. 从文件转文字
    ```
